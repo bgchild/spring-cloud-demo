@@ -1,0 +1,24 @@
+server:
+  port: 82
+spring:
+  application:
+    name: lk-user-server
+  datasource:
+    url: jdbc:mysql://localhost:3306/lk
+    username: root
+    password: 1qaz@k
+    hikari:
+      maximum-pool-size: 20
+      minimum-idle: 10
+mybatis:
+  type-aliases-package: com.lk.userserver.pojo
+eureka:
+  client:
+    service-url:
+      defaultZone: http://127.0.0.1:10086/eureka,http://127.0.0.1:10087/eureka
+#    registry-fetch-interval-seconds: 5
+#  instance:
+#    lease-expiration-duration-in-seconds: 10 # 10秒即过期
+#    lease-renewal-interval-in-seconds: 5 # 5秒一次心跳
+#    instance-id: ${spring.application.name}:${server.port} #列表服务注册信息
+

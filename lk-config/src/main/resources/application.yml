@@ -1,0 +1,18 @@
+server:
+  port: 9527
+spring:
+  application:
+    name: lk-config
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/bgchild/config-server.git
+          username: annlvxy@gmail.com
+          password: 1qaz@git
+eureka:
+  client:
+    service-url:
+      defaultZone: http://127.0.0.1:10086/eureka,http://127.0.0.1:10087/eureka
+    register-with-eureka: false
+
